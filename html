@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Super Store – GK3, New Delhi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-logo">New Super <span>Store</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+
+      <div class="hero-left">
+        <div class="hero-badge">Serving GK3 Since 1980s</div>
+        <h1 class="hero-title">Your <em>Neighbourhood</em> Superstore, Always</h1>
+        <p class="hero-subtitle">
+          Four decades of trust, thousands of products, and the kind of service only a true neighbourhood store can offer. From daily essentials to specialty items — we've got it all under one roof.
+        </p>
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary">Explore Products ↓</a>
+          <a href="#contact" class="btn-secondary">📞 Get in Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><h3>40+</h3><p>Years of Trust</p></div>
+          <div class="stat"><h3>2000+</h3><p>Products</p></div>
+          <div class="stat"><h3>GK3</h3><p>New Delhi</p></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="store-card">
+          <div class="store-icon-grid">
+            <div class="store-icon-item"><span class="icon">🛒</span><span class="label">Groceries</span></div>
+            <div class="store-icon-item"><span class="icon">🥤</span><span class="label">Beverages</span></div>
+            <div class="store-icon-item"><span class="icon">🧼</span><span class="label">Personal Care</span></div>
+            <div class="store-icon-item"><span class="icon">🍿</span><span class="label">Snacks</span></div>
+            <div class="store-icon-item"><span class="icon">🧹</span><span class="label">Household</span></div>
+            <div class="store-icon-item"><span class="icon">🥛</span><span class="label">Dairy</span></div>
+          </div>
+          <div class="store-card-bottom">
+            <div class="open-badge">Open Today</div>
+            <div class="store-hours-text">8:00 AM – 10:00 PM</div>
+          </div>
+          <div class="store-card-info">
+            📍 GK3 Market, Greater Kailash III, New Delhi – 110048<br/>
+            💳 Cash · Paytm · UPI · Cards accepted
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+
+        <div class="about-image-stack reveal">
+          <div class="about-img-main">
+            <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&q=80" alt="Store interior" />
+          </div>
+          <div class="about-img-accent">
+            <img src="https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?w=400&q=80" alt="Grocery shelves" />
+          </div>
+          <div class="year-badge">
+            <strong>1980</strong>
+            <span>Est.</span>
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <div class="section-tag">Our Story</div>
+          <h2 class="section-title">A Cornerstone of the GK3 Community</h2>
+          <p class="about-para">New Super Store was born in the early 1980s with a simple idea — give the people of Greater Kailash III a place where they could find everything they need, without travelling far, and always with a smile.</p>
+          <p class="about-para">What started as a modest provisions shop has grown into one of the most well-stocked departmental stores in the locality. Generations of families have shopped here, and we take that trust seriously.</p>
+          <p class="about-para">We carry over 2,000 products — from everyday staples to niche health foods, premium snacks, and international brands — all curated to match the evolving tastes of our community.</p>
+          <ul class="values-list">
+            <li>Family-run business with four decades of community service</li>
+            <li>Freshly stocked shelves — dairy, bread &amp; perishables delivered daily</li>
+            <li>Accepts cash, Paytm, UPI, and all major cards</li>
+            <li>Dedicated to competitive pricing and genuine quality</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="section products" id="products">
+    <div class="section-inner">
+      <div class="products-header">
+        <div>
+          <div class="section-tag">What We Carry</div>
+          <h2 class="section-title">Over 2,000 Products,<br/>One Neighbourhood Store</h2>
+          <p class="section-desc">Every shelf is packed thoughtfully, so you never have to go anywhere else.</p>
+        </div>
+        <div class="category-filters">
+          <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+          <button class="filter-btn" onclick="filterProducts('food', this)">Food</button>
+          <button class="filter-btn" onclick="filterProducts('drinks', this)">Drinks</button>
+          <button class="filter-btn" onclick="filterProducts('home', this)">Home</button>
+          <button class="filter-btn" onclick="filterProducts('care', this)">Personal Care</button>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== BRANDS ===== -->
+  <div class="brands reveal">
+    <div class="brands-inner">
+      <p class="brands-title">Trusted Brands We Carry</p>
+      <div class="brands-row" id="brandsRow"></div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="services">
+    <div class="section-inner">
+      <div class="section-tag">How We Serve You</div>
+      <h2 class="section-title">Services That Make Your Life Easier</h2>
+      <p class="section-desc">We've been improving how we serve the community for over forty years — and we're not done yet.</p>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-icon">🏍️</span>
+          <h4>Home Delivery</h4>
+          <p>Don't want to step out? Call or WhatsApp us your list and we'll deliver to your doorstep within the GK3 society. Minimum order applies.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">📱</span>
+          <h4>UPI &amp; Digital Payments</h4>
+          <p>Pay the way you prefer — Paytm, PhonePe, Google Pay, BHIM UPI, or any debit/credit card. We're fully equipped for contactless payments.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">📦</span>
+          <h4>Bulk &amp; Wholesale Orders</h4>
+          <p>Stocking up for events, offices, or RWAs? We accommodate bulk orders with advance notice and can arrange special pricing for societies.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🧊</span>
+          <h4>Cold Beverages</h4>
+          <p>Our Pepsi and Bisleri coolers keep your drinks ice cold year-round. Chilled water, soft drinks, energy drinks, and packaged juices always available.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🗓️</span>
+          <h4>Daily Fresh Stock</h4>
+          <p>Bread, eggs, dairy, and perishables are restocked every morning. You'll always find the freshest products when you walk in.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">💬</span>
+          <h4>Personalised Assistance</h4>
+          <p>Can't find something? Our staff knows every corner of the store and can help you locate products, suggest alternatives, or check availability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-heading reveal">
+        <div class="section-tag">Find Us</div>
+        <h2 class="section-title">Come Say Hello</h2>
+        <p class="section-desc">We're right in the heart of GK3 — pop in anytime, or drop us a message and we'll get back to you quickly.</p>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <div class="contact-card reveal">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Address</h4>
+              <p>New Super Store, GK3 Market<br/>Greater Kailash III, New Delhi – 110048</p>
+            </div>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+911129211545">+91 11 2921 1545</a>
+            </div>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <h4>Store Hours</h4>
+              <p>Mon – Sat &nbsp;&nbsp; 8:00 AM – 10:00 PM<br/>Sunday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00 AM – 9:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-icon">💳</div>
+            <div>
+              <h4>Payment Methods</h4>
+              <p>Cash · Paytm · UPI · PhonePe · Google Pay · Debit &amp; Credit Cards</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <h3>Send Us a Message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="fname" placeholder="Ravi Sharma" />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="fphone" placeholder="+91 98100 XXXXX" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>What's This About?</label>
+            <select id="ftype">
+              <option>Product Enquiry</option>
+              <option>Home Delivery Request</option>
+              <option>Bulk / Wholesale Order</option>
+              <option>Feedback</option>
+              <option>Something Else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea id="fmsg" placeholder="Tell us what you need or ask us anything..."></textarea>
+          </div>
+          <button class="submit-btn" onclick="submitForm()">Send Message →</button>
+          <div class="success-msg" id="successMsg">✅ Thanks! We'll get back to you shortly.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP ===== -->
+  <div class="map-wrap">
+    <div class="map-inner">
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.9!2d77.2397!3d28.5353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1e4b5bb1a87%3A0x6e5!2sGreater+Kailash+III%2C+New+Delhi%2C+Delhi+110048!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%" height="320" style="border:0; display:block;"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">New Super <span>Store</span></div>
+          <p>Your trusted neighbourhood departmental store in GK3, Greater Kailash III, serving families since the early 1980s.</p>
+          <div class="payment-icons">
+            <span class="pay-chip">💰 Cash</span>
+            <span class="pay-chip">📲 Paytm</span>
+            <span class="pay-chip">🔷 UPI</span>
+            <span class="pay-chip">💳 Cards</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="#products">Groceries</a></li>
+            <li><a href="#products">Snacks &amp; Namkeen</a></li>
+            <li><a href="#products">Beverages</a></li>
+            <li><a href="#products">Dairy &amp; Bread</a></li>
+            <li><a href="#products">Household</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Store Hours</h5>
+          <ul>
+            <li><a>Mon – Sat: 8 AM – 10 PM</a></li>
+            <li><a>Sunday: 9 AM – 9 PM</a></li>
+            <li><a>📍 GK3 Market, New Delhi</a></li>
+            <li><a href="tel:+911129211545">📞 011-29211545</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 New Super Store, GK3. All rights reserved.</p>
+        <p>Made with ❤️ for the GK3 Community</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
